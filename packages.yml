@@ -1,0 +1,16 @@
+packages:
+  # primarily used for "surrogate_key" function, which is used to create unique hash IDs
+  - package: dbt-labs/dbt_utils
+    version: 0.8.6
+
+  # necessary to validate column types in tests imported from next package
+  - package: calogica/dbt_expectations
+    version: [">=0.8.0", "<0.9.0"]
+
+  # contains tests for HSDS models including schema validation and data quality
+  - git: https://{{env_var('GITHUB_DBT_PAT')}}@github.com/211-Connect/ndp_dbt_core.git
+    revision: main
+  
+  # contains tests for HSDS models including schema validation and data quality
+  - git: https://{{env_var('GITHUB_DBT_PAT')}}@github.com/211-Connect/hsds_dbt_common_models_n_tests.git
+    revision: main
