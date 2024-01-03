@@ -24,7 +24,7 @@ clean-targets: # directories to be removed by `dbt clean`
 
 # Variables
 vars:
-  tenant_id: "618c31a23ea792785d7365de"
+  tenant_id: "67f1081c-5455-47f6-ab02-720292f87edf"
   table_schema: "uwsc_ndp_to_hsds"
 
 # Configuring models
